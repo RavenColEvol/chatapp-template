@@ -1,32 +1,92 @@
-.App {
+:root{
+  --primary-blue:#1EAEDB;
+  --secondary-blue:#0FA0CE;
+  --contrast-skin:#efc663;
+}
+*,*::after,*::before{
+  box-sizing: border-box;
+  line-height: 1.7;
+}
+html{
+  font-family: Raleway;
+}
+.center{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.App{
+  height:100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.center h3{
+  text-transform: uppercase;
+  font-weight: 300;
+  display:block;
+  letter-spacing: 3px;
+  animation:animate .75s ease-out ;
+  backface-visibility: hidden;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes animate{
+  0%{
+    transform: translateY(-100px);
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  75%{
+    transform: translateY(10px);
+    opacity: .75;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+::selection{
+  background:var(--secondary-blue);
+  color:white;
+}
+
+/*Media Query */
+@media screen and (max-width:480px){
+  .center{
+    left:0;
+    transform:translateY(0);
+    text-align: left;
+    padding-left:20px;
+  }
+}
+.btn{
+  animation:button 1s ease-out .75s;
+  animation-fill-mode: backwards;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  padding:15px 45px;
+  background: #1EAEDB;
+  color:white;
+  border-radius: 100px ;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0,0,0,.25);
+  text-transform: uppercase;
+  transition: .15s all ease-in;
+}
+.btn:hover{
+  transform: translateY(-3px);
+  color:white;
+  box-shadow: 0 4px 8px rgba(0,0,0,.20);
+}
+
+@keyframes button{
+  0%{
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
   }
 }

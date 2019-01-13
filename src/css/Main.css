@@ -1,0 +1,141 @@
+.main{
+    text-align: center;
+}
+.main h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding:30px;
+    transition:.15s all;
+    clear: both;
+}
+.main .column{
+    text-align: left;
+    padding-top:50px
+}
+.main h4{
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: .15s all;
+    backface-visibility: hidden;
+    padding: 3px 5px;
+    transform: perspective(1000);
+    display: inline-block;
+}
+.main h4:hover{
+    transform:skewY(5deg);
+    background-color: #0FA0CE;
+    color:white;
+}
+
+
+/*Footer */
+
+.footer{
+    height:50vh;
+    background: #e5e5e5;
+    text-align: center;
+}
+.footer ul{
+    list-style: none;
+}
+.footer ul li{
+    text-align: left;
+    font-weight: 700;
+    
+    transition: .15s all;
+    color:rgba(0,0,0,.5);
+}
+.footer h4{
+    padding:20px 0; 
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+
+}
+.footer ul li span{
+    color:rgba(0,0,0,1);
+    font-size: 18px;font-weight: 400;
+}
+.footer ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.display{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.full{
+    height: 100vh;
+}
+@media screen and (max-width:480px){
+    .display .four{
+        padding:10px;
+    }
+    .display .four i{
+        font-size:30px;
+    }
+}
+@media screen and (min-width:480px){
+    .display .four{
+        padding:30px;
+        transition:.15s all ease-in-out;
+        margin-bottom:30px;
+        color:#333;
+    }
+    .display .four i{
+        font-size:75px;
+    }
+}
+
+.display .four i:hover{
+    color:rgba(0,0,0,1);
+}
+
+.display .four p{
+    font-weight: 700;
+
+}
+.nine{
+    text-align: center;
+    position: relative;
+    height:100vh;
+    background:#f2f2f2;
+}
+.message-container{
+    max-height: 85vh;
+    overflow-y: scroll;
+}
+.chat .message-container  ul{
+    list-style-type: none;
+    padding:20px;
+    text-align:left;
+}
+.message-container ul li{
+
+    display:block;
+}
+.message-container ul li a{
+    display: inline-block;
+    padding:5px 15px;
+    background:#fff;
+    
+}
+.form-group{
+    position:absolute;
+    bottom:0px;
+    width:100%;
+}
+.form-group #inp{
+    width:80%;
+}
+.form-group #button{
+    width:10%;
+    background:#0FA0CE;
+    color:white;
+}
+.message-container::-webkit-scrollbar{
+    width:1em;
+}
